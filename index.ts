@@ -11,9 +11,7 @@ function cloneDeep(source) {
   }, {});
 }
 
-const res = cloneDeep({ foo: "bar", deep: { age: 33 } });
-
-//console.log(res, "res");
+//console.log(cloneDeep({ foo: "bar", deep: { age: 33 } }));
 
 // uniq
 // ===========================================
@@ -23,4 +21,4 @@ function uniq(xs) {
   });
 }
 
-console.log(uniq([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
+// console.log(uniq([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
