@@ -36,6 +36,5 @@ function flatten(xs) {
   }, []);
 }
 
-console.log(flatten([1, 2, [3, 4], 5, 6, 7, [9, [10]]]));
+// console.log(flatten([1, 2, [3, 4], 5, 6, 7, [9, [10]]]));
 
-//console.log([1, ...[3, 3], 5]);
