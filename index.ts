@@ -22,3 +22,20 @@ function uniq(xs) {
 }
 
 // console.log(uniq([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
+
+// flatten
+// ===========================================
+// [1,2, [3,4], 5,6,7, [9, [10]]]
+function flatten(xs) {
+  return xs.reduce((memo, x) => {
+    if (Array.isArray(x)) {
+      return [...memo, ...flatten(x)];
+    } else {
+      return [...memo, x];
+    }
+  }, []);
+}
+
+console.log(flatten([1, 2, [3, 4], 5, 6, 7, [9, [10]]]));
+
+//console.log([1, ...[3, 3], 5]);
