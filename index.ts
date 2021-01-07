@@ -21,6 +21,20 @@ function uniq(xs) {
   });
 }
 
+function uniq2(source) {
+  let map = {};
+  let result = [];
+
+  for (let i = 0; i < source.length; i++) {
+    if (map[source[i]]) {
+      continue;
+    } else {
+      map[source[i]] = true;
+      result.push(map[source[i]]);
+    }
+  }
+}
+
 // console.log(uniq([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
 
 // flatten
