@@ -22,14 +22,14 @@ function uniq(xs) {
 }
 
 function uniq2(source) {
-  let map = {};
+  let hash = {};
   let result = [];
 
   for (let i = 0; i < source.length; i++) {
-    if (map[source[i]]) {
+    if (hash[source[i]]) {
       continue;
     } else {
-      map[source[i]] = true;
+      hash[source[i]] = true;
       result.push(source[i]);
     }
   }
