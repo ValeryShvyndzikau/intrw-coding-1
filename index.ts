@@ -29,7 +29,7 @@ function uniq2(source) {
     if (hash[source[i]]) {
       continue;
     } else {
-      hash[source[i]] = true;
+      hash[JSON.stringify(source[i])] = true;
       result.push(source[i]);
     }
   }
