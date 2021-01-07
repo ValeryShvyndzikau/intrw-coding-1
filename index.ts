@@ -30,12 +30,14 @@ function uniq2(source) {
       continue;
     } else {
       map[source[i]] = true;
-      result.push(map[source[i]]);
+      result.push(source[i]);
     }
   }
+
+  return result;
 }
 
-// console.log(uniq([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
+console.log(uniq2([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
 
 // flatten
 // ===========================================
