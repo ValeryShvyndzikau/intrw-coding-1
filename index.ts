@@ -96,3 +96,28 @@ class Singleton {
 }
 
 //console.log(new Singleton() === new Singleton());
+
+// Currying
+// ===========================================
+
+function curry(f) {
+  let params: Array<any> = [];
+
+  return function _curry(...args) {
+    params.push(args);
+
+    if (arguments.length === f.length) {
+      return f.apply(null, arguments);
+    } else {
+      return _curry;
+    }
+  };
+}
+
+function concatenator(a, b, c) {
+  return a + b + c;
+}
+
+const curriedConcatenator = curry(concatenator);
+
+//console.log(curriedConcatenator("A", "b", "C"));
