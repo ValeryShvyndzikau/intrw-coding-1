@@ -37,7 +37,7 @@ function uniq2(source) {
   return result;
 }
 
-console.log(uniq2([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
+//console.log(uniq2([1, 2, 3, 4, 5, 5, 6, 7, 8, 2, 2, 2]));
 
 // flatten
 // ===========================================
@@ -56,9 +56,12 @@ function flatten(xs) {
 
 // get
 // ===========================================
+const o = { foo: { bar: { deep: 33 } } };
 
 function get(path, source) {
   return path.split(".").reduce((memo, current) => {
     return memo[current];
-  }, {});
+  }, source);
 }
+
+//console.log(get("foo.bar.deep", o));
