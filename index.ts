@@ -58,5 +58,7 @@ function flatten(xs) {
 // ===========================================
 
 function get(path, source) {
-  return path.split(".").reduce((memo, current) => {});
+  return path.split(".").reduce((memo, current) => {
+    return memo[current];
+  }, {});
 }
