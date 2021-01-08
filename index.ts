@@ -78,3 +78,21 @@ function factorial(x) {
 }
 
 //console.log(factorial(5))
+
+// Singleton
+// ===========================================
+
+class Singleton {
+  static instance: Singleton = null;
+
+  constructor() {
+    if (Singleton.instance) {
+      return Singleton.instance;
+    } else {
+      Singleton.instance = this;
+      return this;
+    }
+  }
+}
+
+//console.log(new Singleton() === new Singleton());
