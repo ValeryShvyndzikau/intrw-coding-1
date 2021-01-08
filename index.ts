@@ -54,7 +54,7 @@ function flatten(xs) {
 
 // console.log(flatten([1, 2, [3, 4], 5, 6, 7, [9, [10]]]));
 
-// get
+// get value by path
 // ===========================================
 const o = { foo: { bar: { deep: 33 } } };
 
@@ -65,3 +65,16 @@ function get(path, source) {
 }
 
 //console.log(get("foo.bar.deep", o));
+
+// factorial
+// ===========================================
+
+function factorial(x) {
+  if (x === 1) {
+    return x;
+  }
+
+  return x * factorial(x - 1);
+}
+
+//console.log(factorial(5))
