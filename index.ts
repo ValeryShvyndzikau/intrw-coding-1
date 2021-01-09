@@ -121,3 +121,10 @@ function concatenator(a, b, c) {
 const curriedConcatenator = curry(concatenator);
 
 //console.log(curriedConcatenator("A", "b", "C"));
+
+// Shuffle
+// ===========================================
+function randomNumber(min, max) {
+  const r = Math.random() * (max - min) + min;
+  return Math.floor(r);
+}
