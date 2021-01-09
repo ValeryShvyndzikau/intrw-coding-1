@@ -195,4 +195,4 @@ function process(config) {
   }, Promise.resolve());
 }
 
-process(config);
+// process(config);
