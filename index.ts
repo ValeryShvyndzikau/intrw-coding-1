@@ -137,4 +137,11 @@ function shuffle(source) {
     const pickedItem = source.splice(randomIndex, 1);
     result.push(pickedItem[0]);
   }
+
+  return result;
 }
+
+console.log(shuffle([1, 2, 3, 4, 5, 6, 7]));
+
+// Sort by object field (numbers, strings)
+// ===========================================
