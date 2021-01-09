@@ -162,9 +162,37 @@ function pipe(fns) {
 }
 
 // prettier-ignore
-console.log(
-  pipe([
-    (x) => x.toUpperCase(),
-    (x) => x.split('').reverse().join('')
-  ])('abc')
-)
+// console.log(
+//   pipe([
+//     (x) => x.toUpperCase(),
+//     (x) => x.split('').reverse().join('')
+//   ])('abc')
+// );
+
+// Promise chain
+// ===========================================
+
+function delay(ms, promiseId) {
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(promiseId, ms)
+      resolve(promiseId)
+    }, ms);
+  });
+}
+
+const config = [
+  { ms: 1000, promiseId: 1 },
+  { ms: 300, promiseId: 2 },
+  { ms: 5000, promiseId: 3 },
+  { ms: 50, promiseId: 4 }
+];
+
+function process(config) {
+  return config.reduce((chain, current) => {
+    return chain.then(() => delay(current.ms, current.promiseId));
+  }, Promise.resolve());
+}
+
+process(config);
