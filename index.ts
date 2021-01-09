@@ -128,3 +128,13 @@ function randomNumber(min, max) {
   const r = Math.random() * (max - min) + min;
   return Math.floor(r);
 }
+
+function shuffle(source) {
+  let result = [];
+
+  while (source.length) {
+    const randomIndex = randomNumber(0, source.length);
+    const pickedItem = source.splice(randomIndex, 1);
+    result.push(pickedItem[0]);
+  }
+}
