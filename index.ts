@@ -145,3 +145,26 @@ function shuffle(source) {
 
 // Sort by object field (numbers, strings)
 // ===========================================
+
+// Pipe
+// ===========================================
+
+// prettier-ignore
+function pipe(fns) {
+  return (initialInput) => {
+
+    return fns.reduce((result, fn) => {
+
+      return fn(result);
+
+    }, initialInput)
+  }
+}
+
+// prettier-ignore
+console.log(
+  pipe([
+    (x) => x.toUpperCase(),
+    (x) => x.split('').reverse().join('')
+  ])('abc')
+)
